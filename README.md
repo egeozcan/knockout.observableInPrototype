@@ -1,5 +1,6 @@
 # knockout.observableInPrototype
 
+```javascript
   var map = new WeakMap();
   function createAndGetObservableDictionary(inst) {
     if(!map.has(inst)) {
@@ -28,3 +29,4 @@
       }
     });
   }
+```
