@@ -5,7 +5,7 @@ function createAndGetObservableDictionary(inst) {
   }
   return map.get(inst);
 };
-export function createAndGetObservable(inst, key) {
+function createAndGetObservable(inst, key) {
   var dict = createAndGetObservableDictionary(inst);
   dict[key] = dict[key] || ko.observable();
   return dict[key];
