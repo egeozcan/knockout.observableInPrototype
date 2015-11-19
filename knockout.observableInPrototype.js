@@ -10,7 +10,7 @@ function createAndGetObservable(inst, key) {
   dict[key] = dict[key] || ko.observable();
   return dict[key];
 }
-export function createObservablePropertyOnPrototype(targetClass, key) {
+export default function createObservablePropertyOnPrototype(targetClass, key) {
   Object.defineProperty(targetClass.prototype, key, {
     get: function() {
       return function() {
